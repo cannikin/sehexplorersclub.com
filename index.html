@@ -5,54 +5,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Open+Sans&display=swap" rel="stylesheet">
   <style type="text/css">
-  .material-icons.md-128 { font-size: 128px; }
+    .material-icons.md-128 { font-size: 128px; }
+    .font-serif { font-family: 'Merriweather', serif; }
+    .font-sans { font-family: 'Open sans', sans-serif; }
+    input::placeholder, textarea::placeholder {
+      color: #FBD38D;
+    }
+    input:focus, textarea:focus {
+      border-color: #7B341E;
+    }
   </style>
 </head>
-<body class="bg-cover bg-center" style="background-image: url('/images/bg.jpg')">
-  <header class="max-w-xl mx-auto text-left p-4 mt-8 md:mt-12">
-    <h1 class="text-center md:text-left text-4xl text-orange-900 font-semibold leading-8">The San Elijo Hills Explorers Club</h1>
-    <p class="mt-6 md:mt-4 text-xl text-orange-800 leading-6">Did you find a map to one of our adventures? Did you discover something new? Tell us about it!</p>
+<body class="font-serif font-light bg-cover bg-center" style="background-image: url('/images/bg.jpg')">
+  <header class="max-w-xl mx-auto text-left p-4 md:p-0 mt-8 md:mt-12">
+    <h1 class="font-sans font-light text-center md:text-left text-4xl text-orange-900 font-semibold leading-8">The San Elijo Hills Explorers Club</h1>
+    <p class="mt-6 md:mt-8 text-xl text-orange-800 leading-6">Did you find a map to one of our adventures? Did you discover something new? Tell us about it!</p>
     <p class="mt-2 text-orange-800 opacity-75 leading-5">
       Please, no obvious spoilers on how to find it—everyone should feel the thrill of finding it for themselves! But, subtle clues are always welcome to help those on the hunt...
     </p>
   </header>
-  <div class="w-full max-w-xl mx-auto mt-4 mb-8">
-    <form class="px-4 name="contact" action="/done.html" netlify>
+  <div class="w-full max-w-xl mx-auto mt-8 mb-8">
+    <form class="px-4 md:px-0 name="contact" action="/done.html" netlify>
       <div>
-        <label for="name" class="flex items-center block text-xl text-orange-800 font-semibold">
+        <label for="name" class="flex items-center block text-xl text-orange-800 font-medium">
           <span class="block">Name</span>
-          <span class="ml-2 text-sm font-normal opacity-50">(optional)</span>
+          <span class="ml-2 text-sm font-light opacity-75">(optional)</span>
         </label>
-        <input type="text" name="name" placeholder="Jane Explorer" class="mt-2 w-full p-2 rounded shadow">
+        <input type="text" name="name" placeholder="Jane Explorer" class="mt-2 w-full p-2 rounded shadow text-orange-900 border-2 border-white focus:outline-none">
         <small class="block mt-1 text-orange-800 text-sm font-normal opacity-75 leading-4">Doesn't have to be your real name!<br>How about Indiana Jones? Carmen Sandiego? Nathan Drake?</small>
       </div>
 
       <div class="mt-8">
-        <label for="email" class="flex items-center block text-orange-800 font-semibold">
+        <label for="email" class="flex items-center block text-orange-800 font-medium">
           <span class="block text-xl">Email</span>
-          <span class="ml-2 text-sm font-normal opacity-50">(optional)</span>
+          <span class="ml-2 text-sm font-light opacity-75">(optional, not public)</span>
         </label>
-        <input type="email" name="email" placeholder="email@example.com" class="mt-2 w-full p-2 rounded shadow">
+        <input type="email" name="email" placeholder="email@example.com" class="mt-2 w-full p-2 text-orange-900 border-2 border-white rounded shadow focus:outline-none">
         <small class="text-orange-800 text-sm font-normal opacity-75">We will email you about future adventures!</small>
       </div>
 
       <div class="mt-8">
-        <label for="message" class="block text-xl text-orange-800 font-semibold">Your Story</label>
-        <textarea name="message" placeholder="Tell us about your adventure!" class="mt-2 block w-full h-40 p-2 rounded shadow"></textarea>
+        <label for="message" class="block text-xl text-orange-800 font-medium">Your Story</label>
+        <textarea name="message" placeholder="Tell us about your adventure!" class="mt-2 block w-full h-40 p-2 rounded shadow text-orange-900 border-2 border-white focus:outline-none"></textarea>
         <small class="block mt-1 text-orange-800 text-sm font-normal opacity-75 leading-4">A thrilling yarn to give others a taste for this adventure.</small>
       </div>
 
       <div class="mt-8">
-        <label for="message" class="block text-xl text-orange-800 font-semibold">What's the name of our grocery store?</label>
-        <input type="text" name="question" placeholder="" class="mt-2 w-full p-2 rounded shadow">
+        <label for="message" class="block text-xl text-orange-800 font-medium">What's the name of our grocery store?</label>
+        <input type="text" name="question" placeholder="This should be easy!" class="mt-2 w-full p-2 rounded shadow text-orange-900 border-2 border-white focus:outline-none">
         <small class="text-sm text-orange-800 opacity-75">To make sure you really live here!</small>
       </div>
 
       <div class="mt-8 text-center">
-        <button type="submit" class="mt-2 bg-orange-900 font-light text-white px-8 py-2 rounded">Send!</button>
+        <button type="submit" class="font-sans mt-2 bg-orange-900 font-light text-white px-8 py-2 rounded">Send!</button>
       </div>
     </form>
   </div>
