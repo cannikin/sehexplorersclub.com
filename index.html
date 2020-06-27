@@ -12,34 +12,43 @@
   </style>
 </head>
 <body class="bg-cover bg-center" style="background-image: url('/images/bg.jpg')">
-  <header class="max-w-xl mx-auto text-left py-8">
-    <h1 class="text-4xl text-orange-900 font-semibold">The San Elijo Hills Explorers Club</h1>
-    <p class="text-xl text-orange-800 leading-6">Did you find one of our adventures? Did you discover something new? Tell us about it!</p>
+  <header class="max-w-xl mx-auto text-left p-4 mt-8 md:mt-12">
+    <h1 class="text-center md:text-left text-4xl text-orange-900 font-semibold leading-8">The San Elijo Hills Explorers Club</h1>
+    <p class="mt-6 md:mt-4 text-xl text-orange-800 leading-6">Did you find a map to one of our adventures? Did you discover something new? Tell us about it!</p>
     <p class="mt-2 text-orange-800 opacity-75 leading-5">
-      Please, no obvious spoilers on how to find it—everyone should feel the thrill of finding it for themselves! But, subtle clues are always welcome!
+      Please, no obvious spoilers on how to find it—everyone should feel the thrill of finding it for themselves! But, subtle clues are always welcome to help those on the hunt...
     </p>
   </header>
   <div class="w-full max-w-xl mx-auto mt-4 mb-8">
-    <form name="contact" netlify>
+    <form class="px-4 name="contact" action="/done.html" netlify>
       <div>
-        <label for="name" class="block text-xl text-orange-800 font-semibold">Name <span class="font-normal opacity-50">(optional)</span></label>
+        <label for="name" class="flex items-center block text-xl text-orange-800 font-semibold">
+          <span class="block">Name</span>
+          <span class="ml-2 text-sm font-normal opacity-50">(optional)</span>
+        </label>
         <input type="text" name="name" placeholder="Jane Explorer" class="mt-2 w-full p-2 rounded shadow">
+        <small class="block mt-1 text-orange-800 text-sm font-normal opacity-75 leading-4">Doesn't have to be your real name!<br>How about Indiana Jones? Carmen Sandiego? Nathan Drake?</small>
       </div>
 
       <div class="mt-8">
-        <label for="email" class="block text-xl text-orange-800 font-semibold">Email <span class="font-normal opacity-50">(optional, but we can email you about future adventures!)</span></label>
+        <label for="email" class="flex items-center block text-orange-800 font-semibold">
+          <span class="block text-xl">Email</span>
+          <span class="ml-2 text-sm font-normal opacity-50">(optional)</span>
+        </label>
         <input type="email" name="email" placeholder="email@example.com" class="mt-2 w-full p-2 rounded shadow">
+        <small class="text-orange-800 text-sm font-normal opacity-75">We will email you about future adventures!</small>
       </div>
 
       <div class="mt-8">
         <label for="message" class="block text-xl text-orange-800 font-semibold">Your Story</label>
         <textarea name="message" placeholder="Tell us about your adventure!" class="mt-2 block w-full h-40 p-2 rounded shadow"></textarea>
+        <small class="block mt-1 text-orange-800 text-sm font-normal opacity-75 leading-4">A thrilling yarn to give others a taste for this adventure.</small>
       </div>
 
       <div class="mt-8">
         <label for="message" class="block text-xl text-orange-800 font-semibold">What's the name of our grocery store?</label>
         <input type="text" name="question" placeholder="" class="mt-2 w-full p-2 rounded shadow">
-        <small class="text-sm text-orange-800">To make sure you really live here!</small>
+        <small class="text-sm text-orange-800 opacity-75">To make sure you really live here!</small>
       </div>
 
       <div class="mt-8 text-center">
