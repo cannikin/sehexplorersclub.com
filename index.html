@@ -15,29 +15,35 @@
   <header class="max-w-xl mx-auto text-left py-8">
     <h1 class="text-4xl text-orange-900 font-semibold">The San Elijo Hills Explorers Club</h1>
     <p class="text-xl text-orange-800 leading-6">Did you find one of our adventures? Did you discover something new? Tell us about it!</p>
-    <p class="mt-2 text-orange-800 opacity-75">
+    <p class="mt-2 text-orange-800 opacity-75 leading-5">
       Please, no obvious spoilers on how to find it—everyone should feel the thrill of finding it for themselves! But, subtle clues are always welcome!
     </p>
   </header>
-  <div class="w-full max-w-xl mx-auto mt-8 mb-16">
+  <div class="w-full max-w-xl mx-auto mt-4 mb-8">
     <form name="contact" netlify>
       <div>
         <label for="name" class="block text-xl text-orange-800 font-semibold">Name <span class="font-normal opacity-50">(optional)</span></label>
-        <input type="text" name="name" placeholder="Jane Explorer" class="mt-2 w-full p-2 rounded">
+        <input type="text" name="name" placeholder="Jane Explorer" class="mt-2 w-full p-2 rounded shadow">
       </div>
 
       <div class="mt-8">
         <label for="email" class="block text-xl text-orange-800 font-semibold">Email <span class="font-normal opacity-50">(optional, but we can email you about future adventures!)</span></label>
-        <input type="email" name="email" placeholder="email@example.com" class="mt-2 w-full p-2 rounded">
+        <input type="email" name="email" placeholder="email@example.com" class="mt-2 w-full p-2 rounded shadow">
       </div>
 
       <div class="mt-8">
         <label for="message" class="block text-xl text-orange-800 font-semibold">Your Story</label>
-        <textarea name="message" placeholder="Tell us about your adventure!" class="mt-2 block w-full h-40 p-2 rounded"></textarea>
+        <textarea name="message" placeholder="Tell us about your adventure!" class="mt-2 block w-full h-40 p-2 rounded shadow"></textarea>
+      </div>
+
+      <div class="mt-8">
+        <label for="message" class="block text-xl text-orange-800 font-semibold">What's the name of our grocery store?</label>
+        <input type="text" name="question" placeholder="" class="mt-2 w-full p-2 rounded shadow">
+        <small class="text-sm text-orange-800">To make sure you really live here!</small>
       </div>
 
       <div class="mt-8 text-center">
-        <button type="submit" class="mt-2 bg-orange-900 text-white px-8 py-2 rounded">Send!</button>
+        <button type="submit" class="mt-2 bg-orange-900 font-light text-white px-8 py-2 rounded">Send!</button>
       </div>
     </form>
   </div>
